@@ -4,7 +4,8 @@ ruby '2.3.1'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.8'
-
+gem 'bootstrap-sass', '2.3.2.0'
+gem 'sprockets'
 
 group :development, :test do
   gem 'sqlite3'
@@ -44,7 +45,7 @@ gem 'jbuilder', '1.0.2'
 group :doc do
   gem 'sdoc', '0.3.20', require: false
 end
-#gem 'pg', '0.15.1'
+
 group :production do
   gem 'pg', '0.15.1'
   gem 'rails_12factor', '0.0.2'
