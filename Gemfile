@@ -5,14 +5,19 @@ ruby '2.3.1'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.8'
 
+
 group :development, :test do
   gem 'sqlite3'
-  gem 'rspec-rails', '2.13.1'
+  gem 'spring-commands-rspec'
+  gem 'rspec-rails'
+  gem 'guard-rspec'
+  gem 'rb-fsevent' if `uname` =~ /Darwin/
 end
 
 group :test do
   gem 'selenium-webdriver', '2.35.1'
-  gem 'capybara', '2.1.0'
+  gem 'capybara'
+
 end
 
 # Use SCSS for stylesheets
@@ -39,7 +44,7 @@ gem 'jbuilder', '1.0.2'
 group :doc do
   gem 'sdoc', '0.3.20', require: false
 end
-
+#gem 'pg', '0.15.1'
 group :production do
   gem 'pg', '0.15.1'
   gem 'rails_12factor', '0.0.2'
